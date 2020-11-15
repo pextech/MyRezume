@@ -374,7 +374,28 @@
         </div>
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
 
+
+    <script>
+
+        var firebaseConfig = {
+            apiKey: "AIzaSyApCGGiXaZwVv2vWcXnFcvDwaj52Wch_p0",
+            authDomain: "portfolio-f71e2.firebaseapp.com",
+            databaseURL: "https://portfolio-f71e2.firebaseio.com",
+            projectId: "portfolio-f71e2",
+            storageBucket: "portfolio-f71e2.appspot.com",
+            messagingSenderId: "56559760993",
+            appId: "1:56559760993:web:9c53d1401a696be8c81c20",
+            measurementId: "G-HP28E109R7"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+
+        const db = firebase.firestore();
+    </script>
 
 
 
@@ -385,10 +406,10 @@
 
     <footer>
 
-        <p>copyright Pextech&copy;2020
-            <img class="social" src="../assets/facebook (1).png" alt="">
-            <img class="social" src="../assets/linkedin.png" alt="">
-            <img class="social" src="../assets/twitter.png" alt=""> </p>
+        <p>copyright Pextech&copy;2020</p><br>
+        <img class="social" src="../assets/facebook (1).png" alt="">
+        <img class="social" src="../assets/linkedin.png" alt="">
+        <img class="social" src="../assets/twitter.png" alt=""> </p>
 
     </footer>
 
