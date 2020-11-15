@@ -81,7 +81,7 @@ height: 300px;
 color: #fefefe;
 text-decoration: none;
 }
-.nav-wrapper > .container > .center > ul > .loginBtn {
+.nav-wrapper > .container > .center > ul > a > .loginBtn {
     border-radius:30px;
     
     border: 1px solid #C0D05F;
@@ -93,13 +93,15 @@ text-decoration: none;
 
 }
 
-.nav-wrapper > .container > .center > ul > .loginBtn > a{
+.nav-wrapper > .container > .center > ul > a > .loginBtn {
     color:#C0D05F;
-    text-decoration: none;
+    background-color: transparent;
+    
 }
-.nav-wrapper > .container > .center > ul > .loginBtn > a:hover{
+.nav-wrapper > .container > .center > ul > a > .loginBtn:hover{
     color:#fefefe;
-    text-decoration: none;
+    background-color: #C0D05F;
+    border : 0px;
 }
 
   
@@ -454,6 +456,9 @@ justify-content: space-between;
                     font-size: 1.2em;
     
                 }
+                .container-1 > .blogPost > .blogDetail >.blogContainer > .blogPictureSection > .blogPictureContent >.replyBlock>.replyForm > form >input {
+                    color: #ffff;
+                }
                
                 .container-1 > .blogPost > .blogDetail >.blogContainer > .blogPictureSection > .blogPictureContent >.replyBlock>.replyForm > form > .replyName{
                     background-color: #555;
@@ -461,13 +466,13 @@ justify-content: space-between;
                     border: 1px solid #555;
                     margin-bottom: 20px;
                     height:40px;
-     
+                color: #fff;
                  }
                  .container-1 > .blogPost > .blogDetail >.blogContainer > .blogPictureSection > .blogPictureContent >.replyBlock>.replyForm > form > .replyEmail{
 
                     background: url("../assets/email.png") no-repeat right 10px center ;
                     background-size: 20px;
-                    
+                    color: #fff;
                     background-color: #666;
                     border: 1px solid #666;
                 }
@@ -487,11 +492,18 @@ justify-content: space-between;
                     width: 100%;
      
                  }
+                 #alert {
+                    color: rgb(226, 57, 57);
+                    font-size: 12px;
+                    margin-left: 20px;
+                    display: none;
+                    margin-bottom:20px;
+                    }
                  .container-1 > .blogPost > .blogDetail >.blogContainer > .blogPictureSection > .blogPictureContent >.replyBlock>.replyForm > form > .replyTextArea{
                     background-color: #555;
                     border: 1px solid #555;
                    margin-bottom: 20px;
-                    
+                    color: #fff;
                     width: 100%;
      
                  }
@@ -595,7 +607,7 @@ margin:20px;
    color:#fff;
   
 }
-.container-1 > .blogPost >  .sideFeatures > .searchBox > .subscribeForm > .subscribe {
+.container-1 > .blogPost >  .sideFeatures > .searchBox > .subscribeForm > form >  .subscribe {
     border: 1px solid #C0D05F;
 
     background-color: #C0D05F;
@@ -606,7 +618,7 @@ margin:20px;
    
   
 }
-.container-1 > .blogPost >  .sideFeatures > .searchBox > .subscribeForm > input {
+.container-1 > .blogPost >  .sideFeatures > .searchBox > .subscribeForm > form > input {
 
     background: url("../assets/email.png") no-repeat right 10px center ;
     background-size: 20px;
@@ -615,7 +627,7 @@ margin:20px;
     border: 1px solid #666;
 }
 
-.container-1 > .blogPost >  .sideFeatures > .searchBox > .subscribeForm > input {
+.container-1 > .blogPost >  .sideFeatures > .searchBox > .subscribeForm > form > input {
 
     
    background-color: #555;
@@ -626,11 +638,18 @@ color:#cccc;
    margin-left: 20px;
 
 }
-.container-1 > .blogPost >  .sideFeatures > .searchBox > .subscribeForm > input::placeholder {
+.container-1 > .blogPost >  .sideFeatures > .searchBox > .subscribeForm >form> input::placeholder {
 color: rgb(209, 209, 209);
 text-align: center;
  
  }
+
+ #success {
+    color: rgb(57, 206, 64);
+    font-size: 12px;
+    margin-left: 20px;
+    display: none;
+    }
 
 .container-1 > .blogPost > .sideFeatures > .categories > .categoriesTitle {
     color: #ccc;
