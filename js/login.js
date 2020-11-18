@@ -1,7 +1,7 @@
 
-        var loginForm = document.querySelector('#loginForm');
-        var  email = document.querySelector('#emailAuth');
-        var password = document.querySelector('#passAuth');
+        const loginForm = document.querySelector('#loginForm');
+        const  email = document.querySelector('#emailAuth');
+        const password = document.querySelector('#passAuth');
 
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
