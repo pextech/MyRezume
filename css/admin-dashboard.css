@@ -162,7 +162,7 @@ padding: 10px;
   justify-content: space-between;
 
   margin-top: 20px;
-  margin-left: 0px;
+  margin-left: 20px;
     }
 .panelBox{
    border:2px solid #333;
@@ -362,6 +362,8 @@ tr {
 td{
     color:#ccc;
     font-size: 12px;
+    width:200px;
+
 }
 
 .online{
@@ -578,6 +580,22 @@ padding: 15px;
     height: 30px;
     cursor: pointer;
 }
+
+table tr div{
+    background-color: #f02d2d;
+    color: #f4f4f4;
+    width: 60px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #f02d2d;
+    height: 30px;
+    padding-top:6px;
+    margin-left:90px;
+    margin-top:10px;
+    cursor: pointer;
+}
+
+
 .profileDetails{
     display: flex;
     flex-direction: row;
@@ -826,8 +844,17 @@ margin-top: 10px;
      font-size:12px;
  }
  
- 
+ td{
+    color:#ccc;
+    font-size: 10px;
+    width:fit-content;
+     margin-top: 40px;
+}
 
-
+table tr div{
+    
+    margin-left:00px;
+    
+}
 }
 

@@ -79,84 +79,23 @@
 
 
                 <div class="box-panel">
-                    <table class="usersTable">
+                    <table class="usersTable" id="reviewItems">
 
                         <tr>
-                            <th>profile</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Phone number</th>
 
-                            <th>Description</th>
+                            <th>Message</th>
 
                             <th>Action</th>
                         </tr>
 
-                        <tr>
-                            <td> <img src="../../assets/c.jpg" alt=""></td>
-                            <td>Mupenzi </td>
-                            <td>Mcstain1@gmail.com</td>
+                        <!-- <tr>
 
-                            <td class="descri">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consectetur
-                                modi commodi
-                                dolor doloribus! Soluta obcaecati neque officia</td>
+                            <td><button class="deleteBtn">Delete</button></td>
 
-                            <td>
-                                <button class="deleteBtn">Delete</button></td>
-
-                        </tr>
-                        <tr>
-                            <td> <img src="../../assets/d.jpg" alt=""></td>
-                            <td>chris </td>
-                            <td>chris@gmail.com</td>
-
-                            <td class="descri">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consectetur
-                                modi commodi
-                                dolor doloribus! Soluta obcaecati neque officia</td>
-
-                            <td>
-                                <button class="deleteBtn">Delete</button></td>
-
-                        </tr>
-                        <tr>
-                            <td> <img src="../../assets/slack.jpg" alt=""></td>
-                            <td>cedrick </td>
-                            <td>cedrick@gmail.com</td>
-
-                            <td class="descri">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consectetur
-                                modi commodi
-                                dolor doloribus! Soluta obcaecati neque officia</td>
-
-                            <td>
-                                <button class="deleteBtn">Delete</button></td>
-
-                        </tr>
-                        <tr>
-                            <td> <img src="../../assets/d.jpg" alt=""></td>
-                            <td>ben </td>
-                            <td>ben10@gmail.com</td>
-
-                            <td class="descri">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consectetur
-                                modi commodi
-                                dolor doloribus! Soluta obcaecati neque officia</td>
-
-                            <td>
-                                <button class="deleteBtn">Delete</button></td>
-
-                        </tr>
-                        <tr>
-                            <td> <img src="../../assets/c.jpg" alt=""></td>
-                            <td>yasinn </td>
-                            <td>yasinn@gmail.com</td>
-
-                            <td class="descri">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consectetur
-                                modi commodi
-                                dolor doloribus! Soluta obcaecati neque officia</td>
-
-                            <td>
-                                <button class="deleteBtn">Delete</button></td>
-
-                        </tr>
-
+                        </tr> -->
 
                     </table>
                 </div>
@@ -174,17 +113,34 @@
 
     </div>
 
-
-
-
-
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
 
     <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyApCGGiXaZwVv2vWcXnFcvDwaj52Wch_p0",
+            authDomain: "portfolio-f71e2.firebaseapp.com",
+            databaseURL: "https://portfolio-f71e2.firebaseio.com",
+            projectId: "portfolio-f71e2",
+            storageBucket: "portfolio-f71e2.appspot.com",
+            messagingSenderId: "56559760993",
+            appId: "1:56559760993:web:9c53d1401a696be8c81c20",
+            measurementId: "G-HP28E109R7"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
 
-        CKEDITOR.replace('editor1');
 
+        const db = firebase.firestore();
+        const auth = firebase.auth();
     </script>
 
+
+
+    <script src="../../js/reviews.js"></script>
     <script src="../../js/jquery.js"></script>
     <script src="../../js/custom.js"></script>
 </body>
