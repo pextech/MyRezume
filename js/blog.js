@@ -1,16 +1,16 @@
 const subscribe = () => {
 
-    var subscribeForm = document.querySelector('#subForm');
-    subscribeForm.addEventListener('submit', (e) => {
+    const subscription = document.querySelector('#subForm');
+    subscription.addEventListener('submit', (e) => {
         e.preventDefault();
 
         db.collection('subscribes').add({
 
-            email: subscribeForm['email'].value
+            email: subscription['email'].value
 
         });
 
-        subscribeForm.reset();
+        subscription.reset();
 
         document.querySelector('#success').style.display = 'block';
 
