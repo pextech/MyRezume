@@ -1,15 +1,53 @@
-
-
 $(document).ready(function(){
    
     $("a.mobile").click(function(){
-        $(".sidebar").slideToggle('fast');
+        $(".sidebar").slideToggle('slow');
     });
 
     window.onresize = function(event){
-        if ($(window).width() > 320 ){
+        if ($(window).width() > 857 ){
             $(".sidebar").show();
         }
     }
     
 });
+
+
+
+$(document).ready(function(){
+
+    $('#createPost').click(function(){
+        $("#addPage").slideToggle("slow");
+    });
+    $("#close").click(function(){
+        $("#addPage").slideToggle("slow");
+    });
+    $("#closeModal").click(function(){
+        $("#addPage").slideToggle("slow");
+    });
+
+    
+});
+
+$(document).ready(function(){
+
+    $('#createUser').click(function(){
+        $("#addUser").slideToggle("slow");
+    });
+    $("#close").click(function(){
+        $("#addUser").slideToggle("slow");
+    });
+    $("#closeModal").click(function(){
+        $("#addUser").slideToggle("slow");
+    });
+
+    
+});
+
+
+// function logUserIn(user){
+
+
+// window.location='admin/admin-dashboard.html';
+
+// }
