@@ -1,7 +1,7 @@
 
-        var registerForm = document.querySelector('#registerForm');
-        var  email = document.querySelector('#emailAuth');
-        var password = document.querySelector('#passAuth');
+        const registerForm = document.querySelector('#registerForm');
+        const  email = document.querySelector('#emailAuth');
+        const password = document.querySelector('#passAuth');
 
         registerForm.addEventListener('submit', (e) => {
             e.preventDefault();
