@@ -458,6 +458,14 @@ label{
     color:#fff;
     padding: 15px;
 }
+.textarea{
+    height:300px;
+    width:500px;
+    background-color: #666;
+    border: 1px solid #666;
+    color:#fff;
+    padding: 15px;
+}
 .input::placeholder{
 color:#fff;
 
