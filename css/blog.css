@@ -82,7 +82,7 @@ height: 300px;
 color: #fefefe;
 text-decoration: none;
 }
-.nav-wrapper > .container > .center > ul > .loginBtn {
+.nav-wrapper > .container > .center > ul > a > .loginBtn {
     border-radius:30px;
     
     border: 1px solid #C0D05F;
@@ -91,16 +91,25 @@ text-decoration: none;
     height: 30px;
     background-color: #171717;
     margin:3px;
-
+  cursor: pointer;
+}
+.nav-wrapper > .container > .center > ul > a > .loginBtn:hover {
+    border-radius:30px;
+    color:#fefefe;
+    border: 1px solid #C0D05F;
+    background-color: #C0D05F;
+    
 }
 
-.nav-wrapper > .container > .center > ul > .loginBtn > a{
+.nav-wrapper > .container > .center > ul >  a >.loginBtn {
     color:#C0D05F;
     text-decoration: none;
 }
-.nav-wrapper > .container > .center > ul > .loginBtn > a:hover{
+.nav-wrapper > .container > .center > ul > .loginBtn:hover{
     color:#fefefe;
     text-decoration: none;
+    background-color: #C0D05F;
+  
 }
 
   
