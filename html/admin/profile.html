@@ -1,0 +1,220 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>MyRezume || Admin-dashboard </title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/admin-dashboard.css" />
+    <script src="ckeditor/ckeditor.js"></script>
+
+</head>
+
+<body>
+
+    <div id="header">
+        <div class="logo">
+            <a href="#">MY<span> REZUME</span></a>
+        </div>
+        <div class="Profile">
+            <img class="chat" src="../../assets/chat (2).png" alt="">
+            <img class="pic" src="../../assets/c.jpg" alt="">
+        </div>
+    </div>
+
+    <a href="#" class="mobile">MENU</a>
+
+
+    <div id="container">
+        <div class="sidebar">
+            <ul id="nav">
+                <li> <a href="admin-dashboard.html">Dashboard</a></li>
+                <li> <a href="blog-post.html">Blog Post</a></li>
+                <li> <a href="users.html">Users</a></li>
+                <li> <a href="reviews.html">Reviews</a></li>
+                <li> <a href="profile.html" class="selected">Profile</a></li>
+                <li> <a href="../login.html">Logout</a></li>
+
+
+            </ul>
+
+
+        </div>
+        <div class="content">
+            <div class="contentHeader">
+                <div class="headerContainer">
+                    <h1>Dashboard</h1> <img src="../../assets/admin.png" alt="">
+
+
+                </div>
+                <div class="consumptionContainer">
+                    <div class="consumption">
+                        <div class="box-top">Disk Space Used</div>
+                        <div class="progress">
+                            <div class="progressRate"></div>
+                        </div>
+                    </div>
+                    <div class="consumption">
+                        <div class="box-top"> Bandwidth Used</div>
+                        <div class="progress">
+                            <div class="progressRate"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="banner">
+                <p> <a href="admin-dashboard.html"> DASHBOARD</a> / PROFILE </p>
+            </div>
+
+            <div class="profileSection">
+                <div class="profileDetails">
+
+                    <div class="details">
+
+                    </div>
+                    <div class="edit">
+                        <button class="editBtn" id="editUser">Edit</button>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+            <div id="editProfile">
+
+                <div class="modal-content">
+                    <form id="editForm">
+                        <div class="modal-header">
+
+                            <h4 class="modalTitle">Edit profile</h4>
+                            <button type="button" id="close" class="closeBtn"><span>&times;</span></button>
+                        </div>
+                        <div class="modalBody">
+                            <div class="form-group">
+                                <label>Full name</label>
+
+                                <input type="text" class="input" id="name" placeholder="full name" required>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label>Email </label>
+
+                                <input type="email" class="input" id="email" placeholder="user Email" required>
+
+                            </div>
+                            <div class="form-group">
+                                <label>Phone number</label>
+
+                                <input type="text" class="input" placeholder="phone number" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Location Address</label>
+
+                                <input type="text" class="input" id="address" placeholder="Address" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+
+                                <textarea class="textarea" id="description" placeholder="Description"
+                                    required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Change Profile</label>
+
+                                <input id="image" type="file" required>
+                            </div>
+
+
+
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="closeModal" class="footerBtn">Close</button>
+                            <button type="submit" class="saveBtn">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+
+            <div class="profileViewControl">
+
+                <div class="head">
+                    <h4>Change password</h4>
+                </div>
+                <form>
+                    <label>Old Password</label><br>
+                    <input type="text" placeholder="Enter old Password"><br>
+                    <label>New Password</label><br>
+                    <input type="text" placeholder="Enter New password"> <br>
+                    <label>Confirm Password</label><br>
+                    <input type="text" placeholder="confirm password"> <br>
+
+
+
+                </form>
+                <button class="viewBtn">Change Password</button>
+
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyApCGGiXaZwVv2vWcXnFcvDwaj52Wch_p0",
+            authDomain: "portfolio-f71e2.firebaseapp.com",
+            databaseURL: "https://portfolio-f71e2.firebaseio.com",
+            projectId: "portfolio-f71e2",
+            storageBucket: "portfolio-f71e2.appspot.com",
+            messagingSenderId: "56559760993",
+            appId: "1:56559760993:web:9c53d1401a696be8c81c20",
+            measurementId: "G-HP28E109R7"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+        const db = firebase.firestore();
+        const storage = firebase.storage();
+
+    </script>
+
+
+
+
+
+
+
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/custom.js"></script>
+    <script src="../../js/profile.js"></script>
+</body>
+
+</html>

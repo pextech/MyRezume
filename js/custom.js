@@ -44,6 +44,21 @@ $(document).ready(function(){
     
 });
 
+$(document).ready(function(){
+
+    $('#editUser').click(function(){
+        $("#editProfile").slideToggle("slow");
+    });
+    $("#close").click(function(){
+        $("#editProfile").slideToggle("slow");
+    });
+    $("#closeModal").click(function(){
+        $("#editProfile").slideToggle("slow");
+    });
+
+    
+});
+
 
 // function logUserIn(user){
 
