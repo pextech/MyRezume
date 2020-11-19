@@ -22,6 +22,31 @@ body{
 
 }
 
+input:required:focus {
+    border: 1px solid #C0D05F;
+    outline: none;
+  }
+
+.alert-name,.alert-email,.alert-phone,.alert-message {
+    color: rgb(226, 57, 57);
+    font-size: 10px;
+    margin-left: 20px;
+    display: none;
+    }
+
+ #alert {
+color: rgb(226, 57, 57);
+font-size: 12px;
+margin-left: 20px;
+display: none;
+}
+#success {
+    color: rgb(57, 206, 64);
+    font-size: 12px;
+    margin-left: 20px;
+    display: none;
+    }
+    
 .container{
  
    
@@ -40,14 +65,15 @@ height:750px;
 
 
 .nav-wrapper > .container > .center > ul {
-    position: fixed;
-   
+    position: absolute;
+   top:0;
     width: 90%;
  text-align: right;
-   
+  
    
     
 }
+
 .nav-wrapper > .container > .center > ul > li {
     text-decoration: none;
     display: inline-block;
@@ -55,7 +81,7 @@ height:750px;
 
 }
 
-.nav-wrapper > .container > .center > ul > .loginBtn {
+.nav-wrapper > .container > .center > ul > a > .loginBtn {
     border-radius:30px;
     
     border: 1px solid #C0D05F;
@@ -65,6 +91,17 @@ height:750px;
     background-color: #171717;
  
 
+}
+
+.nav-wrapper > .container > .center > ul > a > .loginBtn {
+    color:#C0D05F;
+    background-color: transparent;
+    
+}
+.nav-wrapper > .container > .center > ul > a > .loginBtn:hover{
+    color:#fefefe;
+    background-color: #C0D05F;
+    border : 0px;
 }
 
 .nav-wrapper > .container > .center > .nav-wrapper-content {
@@ -213,11 +250,11 @@ small{
 }
 
 .subtitle{
-    margin-left: 30%;
+    margin-left: 10%;
     color:#ccc;
 }
 .subtitle small{
-    margin-left: 15%;
+    margin-left: 25%;
     font-size: 10px;
 }
 .rezume-text-base {
@@ -311,10 +348,16 @@ background-color: #333;
     font-size: 14px;
     
 }
-.container-1 > .myProfile > img{
+.container-1 > .picContainer > .myProfile > img{
 border-radius: 10px;
 width:300px;
 height:300px;
+}
+
+.picContainer {
+    display: flex;
+    flex-direction: row;
+    
 }
 
 .container-1 > .aboutMe {
@@ -325,6 +368,7 @@ height:300px;
 .container-1 > .aboutMe > .buttons{
 
     padding-top:20px;
+    margin-top: 10px;
   
 }
 .container-1 > .aboutMe > .buttons a{
@@ -359,7 +403,8 @@ margin-top:10%;
 .container-1 > .serviceBox{
    background-color: #333;
     margin:5px;
-    height:fit-content;
+    height:400px;
+    width: 400px;
 
 }
 .container-1 > .serviceBox > h4{
@@ -486,13 +531,7 @@ footer{
         margin-right: 20%;
         font-size: 10px;
     }
-    .container-1 > .serviceBox> .serviceLogo > img{
-        width: 100px;
-        height: 100px;
-    margin-left:40%;
-    margin-top:10%;
     
-    }
     .portfolio-text-base{
         text-align: center;
         padding:0;
@@ -524,7 +563,7 @@ footer{
  margin-left:0px;
     }
     .container-1 > .serviceBox{
-        border:3px solid #ccc;
+        border:1px solid #333;
         margin:5px;
         height:fit-content;
         width:85%;
@@ -543,7 +582,7 @@ footer{
 
       
     .container{
-        width:100%;
+        width:80%;
         height:500px;
             }
             .nav-wrapper > .container > .center > .nav-wrapper-content{
@@ -572,13 +611,14 @@ margin-left: 40%;
             .nav-wrapper > .container > .center > .links {
 
                 position: absolute;
+               
 
             }
             .nav-wrapper > .container > .center >.nav-wrapper-content  {
                 
               
-               width:250px;
-               
+               width:150px;
+                
 
                
         
@@ -586,8 +626,9 @@ margin-left: 40%;
 
             .nav-wrapper > .container > .center >.nav-wrapper-content > .nav-wrapper-content-text > p {
                 
-                font-size: 18px;
+                font-size: 15px;
                text-align: center;
+              
             }
      strong {
                 
@@ -611,19 +652,39 @@ margin-left: 40%;
             }
             
             .aboutMe{
-               width:400px;
+               max-width: 200px;
                padding-top:20px;
-               padding-right: 40px;;
+               padding-right: 0px;;
             }
-           
+            .aboutMe .buttons{
+                width: 200px;
+            }
+            .aboutMe p{
+                width: 200px;
+            }
+            .picContainer {
+                display: flex;
+                flex-direction: column;
+                
+            }
+            .container-1 > .picContainer > .myProfile > img{
+                border-radius: 10px;
+                width:200px;
+                height:200px;
+                margin-left: 20px;
+                }
+                
+              
         a.mobile{
             display:block;
         }
         .container-1 > .box > p ,  .container-2 > .box > p{ 
           font-size: 12px;
+         
         }
         *{
             font-size: 12px;
+            
         }
 
         .bgMe{
@@ -632,13 +693,15 @@ margin-left: 40%;
         }
         
         body{
-            
+            max-width: 100%;
             overflow-x: hidden;
         
         }
         .container-1 > .serviceBox> .serviceLogo > img{
            
-        margin-left: 35%;
+        margin-left: 30%;
+        width:100px;
+
         
         }
         .center{
@@ -670,4 +733,6 @@ margin-left: 40%;
             
                 
             }
+
+            
 }
