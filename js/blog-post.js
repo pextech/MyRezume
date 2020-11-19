@@ -1,7 +1,7 @@
 
-
-
 const postForm = document.querySelector('#postForm');
+const editPostForm = document.querySelector('#postForm');
+
 
 
 postForm.addEventListener("submit",(e)=>{
@@ -40,33 +40,28 @@ postForm.addEventListener("submit",(e)=>{
    })
 
     function savePost(url){
-    db.collection('posts').add({
+      db.collection('posts').add({
 
         title: title.value,
         body: body.value,
         image: url
     
 
-    });
+       });
 
-    postForm.reset();
+     postForm.reset();
     
 
-    $(document).ready(function(){
+     $(document).ready(function(){
 
        
             $("#addPage").hide();
         
         
         
-    });
-}
-
-   })
-
-
-
-
+      });
+    }
+ })
 
  const reviewPost = document.querySelector('.blogContainer');
 
@@ -88,10 +83,110 @@ changes.forEach(change => {
     }
 
 });
-
-
-
 });
+
+
+
+
+
+
+
+    postForm.addEventListener("submit",(e)=>{
+
+
+
+    e.preventDefault();
+    let title = document.querySelector('#postTitleN');
+    let body = document.querySelector('#postBodyN');
+    let image = document.querySelector('#imageN').files[0];
+    let imageName = image.name;
+    
+ 
+    
+ 
+    const storageRef = storage.ref(imageName);
+    const uploadTask = storageRef.put(image);
+ 
+    uploadTask.on('state_changed',(snapshot)=>{
+ 
+     var progress = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+ 
+     console.log('upload is' + progress + "done");
+ 
+    },(error)=>{
+ 
+     console.log(error.message);
+ 
+    },()=>{
+ 
+     uploadTask.snapshot.ref.getDownloadURL().then((downloadURL)=>{
+ 
+         editPost(downloadURL);
+ 
+     })
+    })
+ 
+ function editPost(url){
+
+    editBtn.addEventListener('click',(e)=>{
+
+        e.preventDefault();
+
+        let id = e.target.parentElement.parentElement.parentElement.parentElement.getAttribute('data-id');
+        
+        
+
+       
+
+    })
+
+
+    editPostForm.addEventListener('submit',(e)=>{
+     e.preventDefault();
+
+     db.collection('posts').doc(id).update({
+
+
+        title: title.value,
+        body: body.value,
+        image: url
+
+    });
+
+
+    })
+
+
+    
+      editPostForm.reset();
+     
+ 
+      $(document).ready(function(){
+ 
+        
+             $("#editPost").hide();
+         
+         
+         
+       });
+     }
+  })
+ 
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function getPosts(element){
@@ -134,7 +229,7 @@ function getPosts(element){
     editBtn.textContent = " edit";
 
     
-    // let deleteBtn = document.createElement('div');
+    
 
     post.setAttribute('data-id',element.id);
     image.setAttribute('src',element.data().image);
@@ -177,12 +272,48 @@ function getPosts(element){
 
     })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
+
+    
+
+  
+   
+$(document).ready(function(){
+
+    $('.editBtn').click(function(){
+        $("#editPost").show();
+    });
+    $("#closeN").click(function(){
+        $("#editPost").hide();
+    });
+    $("#closeModalN").click(function(){
+        $("#editPost").hide();
+    });
+
+    
+});
+
 
 }
 
    
-    
+
 
 
        
