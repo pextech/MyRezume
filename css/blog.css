@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-size: 15px;
     font-family: 'Courier New', Courier, monospace;
+    color: #ccc;
 }
 body{
     margin:0px;
@@ -205,6 +206,7 @@ footer{
     margin-top: 10px;
     color:#C0D05F;
     border: 1px solid #333;
+    cursor: pointer;
 
 }
 .readMore a{
