@@ -1,7 +1,5 @@
 const logout = document.querySelector('#logout');
 
-// document.querySelectorAll('.number').innerHTML=`${total}`;
-
 
 
 
