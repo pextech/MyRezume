@@ -398,7 +398,7 @@ td{
     margin-bottom: 20px;
     
 }
-#addPage{
+#addPage,#editPost{
     display: none;
     background-color: #333;
     margin-top: 20px;
@@ -453,6 +453,14 @@ label{
 }
 .input{
     height:30px;
+    background-color: #666;
+    border: 1px solid #666;
+    color:#fff;
+    padding: 15px;
+}
+.textarea{
+    height:300px;
+    width:500px;
     background-color: #666;
     border: 1px solid #666;
     color:#fff;
