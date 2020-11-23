@@ -6,7 +6,7 @@
     <title>MyRezume || Admin-dashboard </title>
 
     <link rel="stylesheet" type="text/css" href="../../css/admin-dashboard.css" />
-
+    <script src="ckeditor/ckeditor.js"></script>
 
 </head>
 
@@ -80,33 +80,43 @@
             <div id="addPage">
 
                 <div class="modal-content">
-                    <form id="postForm">
+                    <form>
                         <div class="modal-header">
 
-                            <h4 class="modalTitle">Add Post</h4>
+                            <h4 class="modalTitle">Add page</h4>
                             <button type="button" id="close" class="closeBtn"><span>&times;</span></button>
                         </div>
                         <div class="modalBody">
                             <div class="form-group">
                                 <label>Post title</label>
 
-                                <input type="text" id="postTitle" class="input" placeholder="Post title" required>
+                                <input type="text" class="input" placeholder="Page title">
                             </div>
 
                             <div class="form-group">
-                                <label>Post body</label>
+                                <label>Page body</label>
 
-                                <textarea id="postBody" class="textarea" placeholder="Post body" required></textarea>
+                                <textarea name="editor1" class="input" placeholder="Page body"></textarea>
 
                             </div>
                             <div class="checkbox">
 
                                 <label>
-                                    <input type="file" id="image" required>
+                                    <input type="checkbox"> Published
                                 </label>
                             </div>
 
+                            <div class="form-group">
+                                <label>Meta tags</label>
 
+                                <input type="text" class="input" placeholder="add some tags...">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Meta description</label>
+
+                                <input type="text" class="input" placeholder="add meta Description">
+                            </div>
 
 
                         </div>
@@ -120,57 +130,150 @@
             </div>
 
 
-
-            <div id="editPost">
-
-                <div class="modal-content">
-                    <form id="editPostForm">
-                        <div class="modal-header">
-
-                            <h4 class="modalTitle">Edit Post</h4>
-                            <button type="button" id="closeN" class="closeBtn"><span>&times;</span></button>
-                        </div>
-                        <div class="modalBody">
-                            <div class="form-group">
-                                <label>Post title</label>
-
-                                <input type="text" id="postTitleN" class="input" placeholder="Post title" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Post body</label>
-
-                                <textarea id="postBodyN" class="textarea" placeholder="Post body" required></textarea>
-
-                            </div>
-                            <div class="checkbox">
-
-                                <label>
-                                    <input type="file" id="imageN" required>
-                                </label>
-                            </div>
-
-
-
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" id="closeModalN" class="footerBtn">Close</button>
-                            <button type="submit" class="saveBtn">Save changes</button>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-
-
-
             <div class="blogsList">
 
                 <div class="blogsListTitle">
                     <h5>Recent Blogs posted by Admin</h5>
                 </div>
                 <div class="blogContainer">
+                    <div class="blog">
+                        <div class="blogPicture">
+                            <img src="../../assets/test122.jpg" alt="">
+                        </div>
+                        <div class="blogTitle">
+                            Code by day Hack by night
+                        </div>
+                        <div class="blogDescription">
+                            <p>we code by day and we hack by night indeed , we are invicimbles
+                                we code by day and we hack by night indeed , we are invicimbles
+                                ...</p>
+                        </div>
+                        <div class="blogTime">
+                            <p>19 march 2020</p>
+                        </div>
+                        <div class="authorDetails">
+                            <img src="../../assets/facebook (1).png" alt="">
+                            <img src="../../assets/twitter.png" alt="">
+                            <img src="../../assets/linkedin.png" alt="">
+                        </div>
+
+                        <div class="blogAction">
+                            <div class="actionContainer">
+                                <div class="view">
+                                    <button class="viewBtn">View</button>
+                                </div>
+                                <div class="edit">
+                                    <button class="editBtn">Edit</button>
+                                </div>
+                                <div class="delete">
+                                    <button class="deleteBtn">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="blog">
+                        <div class="blogPicture">
+                            <img src="../../assets/test13.jpg" alt="">
+                        </div>
+                        <div class="blogTitle">
+                            Code by day Hack by night
+                        </div>
+                        <div class="blogDescription">
+                            <p>we code by day and we hack by night indeed , we are invicimbles
+                                we code by day and we hack by night indeed , we are invicimbles
+                                ...</p>
+                        </div>
+                        <div class="blogTime">
+                            <p>19 march 2020</p>
+                        </div>
+                        <div class="authorDetails">
+                            <img src="../../assets/facebook (1).png" alt="">
+                            <img src="../../assets/twitter.png" alt="">
+                            <img src="../../assets/linkedin.png" alt="">
+                        </div>
+                        <div class="blogAction">
+                            <div class="actionContainer">
+                                <div class="view">
+                                    <button class="viewBtn">View</button>
+                                </div>
+                                <div class="edit">
+                                    <button class="editBtn">Edit</button>
+                                </div>
+                                <div class="delete">
+                                    <button class="deleteBtn">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <div class="blogPicture">
+                            <img src="../../assets/test14.jpg" alt="">
+                        </div>
+                        <div class="blogTitle">
+                            Code by day Hack by night
+                        </div>
+                        <div class="blogDescription">
+                            <p>we code by day and we hack by night indeed , we are invicimbles
+                                we code by day and we hack by night indeed , we are invicimbles
+                                ...</p>
+                        </div>
+                        <div class="blogTime">
+                            <p>19 march 2020</p>
+                        </div>
+                        <div class="authorDetails">
+                            <img src="../../assets/facebook (1).png" alt="">
+                            <img src="../../assets/twitter.png" alt="">
+                            <img src="../../assets/linkedin.png" alt="">
+                        </div>
+                        <div class="blogAction">
+                            <div class="actionContainer">
+                                <div class="view">
+                                    <button class="viewBtn">View</button>
+                                </div>
+                                <div class="edit">
+                                    <button class="editBtn">Edit</button>
+                                </div>
+                                <div class="delete">
+                                    <button class="deleteBtn">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog">
+                        <div class="blogPicture">
+                            <img src="../../assets/test5.jpg" alt="">
+                        </div>
+                        <div class="blogTitle">
+                            Code by day Hack by night
+                        </div>
+                        <div class="blogDescription">
+                            <p>we code by day and we hack by night indeed , we are invicimbles
+                                we code by day and we hack by night indeed , we are invicimbles
+                                ...</p>
+                        </div>
+                        <div class="blogTime">
+                            <p>19 march 2020</p>
+                        </div>
+                        <div class="authorDetails">
+                            <img src="../../assets/facebook (1).png" alt="">
+                            <img src="../../assets/twitter.png" alt="">
+                            <img src="../../assets/linkedin.png" alt="">
+                        </div>
+                        <div class="blogAction">
+                            <div class="actionContainer">
+                                <div class="view">
+                                    <button class="viewBtn">View</button>
+                                </div>
+                                <div class="edit">
+                                    <button class="editBtn">Edit</button>
+                                </div>
+                                <div class="delete">
+                                    <button class="deleteBtn">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -209,38 +312,17 @@
 
 
 
-    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-storage.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+
+
 
     <script>
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        var firebaseConfig = {
-            apiKey: "AIzaSyApCGGiXaZwVv2vWcXnFcvDwaj52Wch_p0",
-            authDomain: "portfolio-f71e2.firebaseapp.com",
-            databaseURL: "https://portfolio-f71e2.firebaseio.com",
-            projectId: "portfolio-f71e2",
-            storageBucket: "portfolio-f71e2.appspot.com",
-            messagingSenderId: "56559760993",
-            appId: "1:56559760993:web:9c53d1401a696be8c81c20",
-            measurementId: "G-HP28E109R7"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
 
+        CKEDITOR.replace('editor1');
 
-        const db = firebase.firestore();
-        const storage = firebase.storage();
     </script>
-
-
-
-
 
     <script src="../../js/jquery.js"></script>
     <script src="../../js/custom.js"></script>
-    <script src="../../js/blog-post.js"></script>
 </body>
 
 </html>

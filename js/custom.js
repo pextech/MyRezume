@@ -52,9 +52,6 @@ $(function () {
   });
 
 
-
-
-
 // function logUserIn(user){
 
 
